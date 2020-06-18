@@ -17,12 +17,18 @@
             @if ($errors->has('title'))
             <span class="error">{{ $errors->first('title') }}</span>
             @endif
+            @error('title')
+            <span class="error">{{ $message }}</span>
+            @enderror
         </p>
         <p>
             <textarea name="body" placeholder="enter body">{{ old('body', $post->body) }}</textarea>
             @if ($errors->has('body'))
             <span class="error">{{ $errors->first('body') }}</span>
             @endif
+            @error('body')
+            <span class="error">{{ $message }}</span>
+            @enderror
         </p>
         <p>
             <input type="submit" name="submit" value="Update">

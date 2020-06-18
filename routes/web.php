@@ -28,3 +28,7 @@ Route::delete('/posts/{post}', 'PostsController@destroy');
 Route::post('/posts/{post}/comments', 'CommentsController@store');
 Route::delete('/posts/{post}/comments/{comment}', 'CommentsController@destroy');
 
+Route::get('/hello', 'HelloController@index');
+Route::post('/hello', 'HelloController@post');
+//Route::get('/hello', 'HelloController@index')->middleware(HelloMiddleware::class);
+//Route::get('/hello', 'HelloController@index')->middleware('hello');
